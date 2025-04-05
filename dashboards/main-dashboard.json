@@ -1,0 +1,65 @@
+{
+    "id": null,
+    "uid": "sys-metrics",
+    "title": "System Metrics Dashboard",
+    "tags": ["prometheus"],
+    "timezone": "browser",
+    "schemaVersion": 36,
+    "version": 1,
+    "refresh": "5s",
+    "panels": [
+      {
+        "type": "timeseries",
+        "title": "CPU Usage (user)",
+        "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+        "targets": [
+          {
+            "expr": "rate(node_cpu_seconds_total{mode=\"user\"}[5m])",
+            "refId": "A"
+          }
+        ],
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        }
+      },
+      {
+        "type": "timeseries",
+        "title": "Memory Usage",
+        "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+        "targets": [
+          {
+            "expr": "node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes",
+            "refId": "B"
+          }
+        ],
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        }
+      },
+      {
+        "type": "gauge",
+        "title": "System Uptime",
+        "gridPos": { "x": 0, "y": 8, "w": 6, "h": 6 },
+        "targets": [
+          {
+            "expr": "node_time_seconds - node_boot_time_seconds",
+            "refId": "C"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s",
+            "max": 1000000
+          },
+          "overrides": []
+        },
+        "datasource": {
+          "type": "prometheus",
+          "uid": "prometheus"
+        }
+      }
+    ]
+  }
+  

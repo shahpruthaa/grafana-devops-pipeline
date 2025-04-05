@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+.env
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# VS Code
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Grafana provisioned dashboards and datasources (if generated)
+grafana-config/dashboards/*.json
+grafana-config/datasources/*.json
+
+# Ignore local Grafana data if mounted
+grafana-data/
+
+# Ignore backup files
+*.bak
+*~

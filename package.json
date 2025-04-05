@@ -1,0 +1,23 @@
+{
+  "name": "apd-project",
+  "version": "1.0.0",
+  "description": "APD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahpruthaa/grafana-devops-pipeline.git"
+  },
+  "author": "Prutha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahpruthaa/grafana-devops-pipeline/issues"
+  },
+  "homepage": "https://github.com/shahpruthaa/grafana-devops-pipeline#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "prom-client": "^15.1.3"
+  }
+}
